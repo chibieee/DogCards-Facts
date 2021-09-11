@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    padding-top: 150px;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 36px;
+}
+.dog-grid {
+    padding: 0 100px;
+    /* display: grid;
+    grid-template-columns: repeat(5, minmax(200px, 1fr));
+    grid-gap: 2rem; */
+}
+.dog-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 20%;
+    margin-bottom: 16px;
+}
+.dog-card img {
+    width: 100%;
+    border-radius: 4px;
+}
+.dog-content {
+    height: 100%;
+    padding: 24px;
+}
+.dog-content p {
+    font-size: 18px;
+}
+.dog-card-front {
+    backface-visibility: hidden;
+    transition: 1s ease;
+}
+.dog-card-back {
+    padding: 24px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: rotateY(180deg);
+    transition: 1s ease;
+    backface-visibility: hidden;
+    border: 2px solid #000;
+    border-radius: 4px;
+}
+.dog-fact {
+    font-size: 18px;
+    line-height: 1.5;
+}
+.dog-card:hover .dog-card-front {
+    transform: rotateY(180deg);
+}
+.dog-card:hover .dog-card-back {
+    transform: rotateY(0deg);
+}
